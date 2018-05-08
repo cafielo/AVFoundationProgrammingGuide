@@ -1,9 +1,7 @@
 # AVFoundation ProgrammingGuide
 <br>
 
-## Introduction 
-<br>
-
+## Introduction
 #### About AVFoundation 
 - play, create time based audiovisual media
 
