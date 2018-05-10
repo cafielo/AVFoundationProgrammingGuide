@@ -31,7 +31,7 @@ Two facets of API
     - Separate presentation state(play, displaying..) from the asset itself
     - presentation state is managed by player item
     - play player item(eg. avplayeritem) using player(eg. avplayer )
-- Reading, Writing, and Recording Assets
+- Reading, Writing, and Reencording Assets
     - Reencode: use Export Session, Asset Reader, Asset Writer
       - Visual representation of audio: use Asset Reader
 - Thumbnails
