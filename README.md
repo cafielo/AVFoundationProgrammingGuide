@@ -2,9 +2,10 @@
 <br>
 
 ## Introduction
+<br>
 #### About AVFoundation 
 - play, create time based audiovisual media
-
+<br>
 #### Framework architecture
 ![frameworksblockdiagram_2x](https://user-images.githubusercontent.com/5119286/39769839-42848828-5328-11e8-8470-1c203fccde16.png)
 
@@ -13,14 +14,14 @@ For Simple Task
 - Record Video: use UIImagePickerController
 
 
-
+<br>
 #### At a Glance
 Two facets of API 
 - Video
 - Audio
 
 
-
+<br>
 #### Representing and  Using Media with AVFoundation 
 - AVAsset
     - primary class for representing media
@@ -47,7 +48,7 @@ Two facets of API
     - Capture Session manages flow data from input(cam) to output(display)
     - Manage data flow !!
 
-
+<br>
 #### Concurrent Programming with AVFoundation 
 - Callbacks from AVFoundation are invoked on which its internal tasks
 - 2 guideline for notification and threading
@@ -56,6 +57,7 @@ Two facets of API
 - Must See code
     - https://developer.apple.com/library/content/samplecode/AVCam/Introduction/Intro.html#//apple_ref/doc/uid/DTS40010112-Intro-DontLinkElementID_2
 
+<br>
 #### Prerequisites
 - basic playback: https://developer.apple.com/documentation/avkit
 
@@ -70,7 +72,7 @@ Assets can come from various way(File, iPod Library, Server…etc)
 - all the information of asset might not be  immediately available
 
 
-
+<br>
 #### Creating an Asset Object
 
 Using URL to create asset with AVURLAsset
@@ -92,7 +94,7 @@ Accessing the User’s Assets
 
 코드 필요
 
-
+<br>
 #### Preparing an Asset for Use
 
 Initializing an asset does not mean that information of item is immediately available
@@ -106,7 +108,7 @@ Load information asynchronously
 코드 필요
 
 
-
+<br>
 #### Getting Still Images from a Video
 
 
@@ -133,14 +135,14 @@ Generating a Sequence of Images
 
 코드 필요 
 
-
+<br>
 #### Trimming and Transcoding a Movie
 
 Trim and Transcoding 
 - use AVAssetExportSession
 
 Work flow 
-￼
+￼![export_2x](https://user-images.githubusercontent.com/5119286/40695420-2694e240-63fc-11e8-84e4-c468b3d6fa47.png)
 
 
 How to use ExportSession
@@ -200,8 +202,8 @@ AVCaptureVideoPreviewLayer
 
 
 single session can configure multiple inputs and outputs
+![captureoverview_2x](https://user-images.githubusercontent.com/5119286/40695431-2f7a9c92-63fc-11e8-83e5-e24725390bf9.png)
 
-￼그림필요
 
 
 
@@ -213,9 +215,11 @@ AVCaptureConnection
 - Use AVCaptureConnection to enable or disable data flow
 - Use AVCaptureConnection to monitor audio power level
 
-￼그림필요
+
+![capturedetail_2x](https://user-images.githubusercontent.com/5119286/40695437-34bdb216-63fc-11e8-8594-ddf920462cb5.png)
 
 
+<br>
 #### Use a Capture Session to Coordinate Data Flow
 
 
@@ -265,7 +269,7 @@ Monitoring Capture Session State
 - observe running and interrupted property to post notification on the main thread
 
 
-
+<br>
 #### An AVCaptureDevice Object Represents and Inputs Device
 
 AVCaptureDevice(abstract of physical device) provides input data to AVCaptureSession
@@ -355,8 +359,7 @@ Switching Between Devices
     - this ensure smooth transition
 
 
-
-
+<br>
 #### Use Capture Inputs to Add a Capture Device to a Session 
 
 Use AVCaptureDeviceInput 
@@ -375,7 +378,8 @@ do {
     }
 ```
 
-### Use Capture Output to Get Output from a Session 
+<br>
+#### Use Capture Output to Get Output from a Session 
 
 To get output from capture session,  you add outputs. 
 - **AVCaptureMovieFileOutput** to output to a movie file
@@ -418,7 +422,7 @@ stillImageOutput.outputSettings = dic
 - Capturing an Image 
     - use `captureStillImageAsynchronouslyFromConnection:completionHandler:` to capture
 
-
+<br>
 #### Showing the User What’s Being  Recorded
 
 Video Preview
@@ -438,7 +442,7 @@ preview.layer.addSublayer(previewLayer)
 Showing Audio Levels
 - use `AVCaptureAudioChannel` to monitor power level of audio
 
-
+<br>
 #### Putting It All Together: Capture Video Frames as UIImage Objects
 
 - Create an AVCaptureSession object to coordinate the flow of data from an AV input device to an output
@@ -486,7 +490,7 @@ func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuff
 session.startRunning()
 ```
 
-
+<br>
 #### High Frame Rate Video Capture
 
 Use AVCaptureDeviceFormat to determine the capture capbilities
