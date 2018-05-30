@@ -2,10 +2,12 @@
 <br>
 
 ## Introduction
-<br>
+<br> 
+
 #### About AVFoundation 
 - play, create time based audiovisual media
-<br>
+<br> 
+
 #### Framework architecture
 ![frameworksblockdiagram_2x](https://user-images.githubusercontent.com/5119286/39769839-42848828-5328-11e8-8470-1c203fccde16.png)
 
@@ -15,6 +17,7 @@ For Simple Task
 
 
 <br>
+
 #### At a Glance
 Two facets of API 
 - Video
@@ -22,6 +25,7 @@ Two facets of API
 
 
 <br>
+
 #### Representing and  Using Media with AVFoundation 
 - AVAsset
     - primary class for representing media
@@ -49,6 +53,7 @@ Two facets of API
     - Manage data flow !!
 
 <br>
+
 #### Concurrent Programming with AVFoundation 
 - Callbacks from AVFoundation are invoked on which its internal tasks
 - 2 guideline for notification and threading
@@ -58,6 +63,7 @@ Two facets of API
     - https://developer.apple.com/library/content/samplecode/AVCam/Introduction/Intro.html#//apple_ref/doc/uid/DTS40010112-Intro-DontLinkElementID_2
 
 <br>
+
 #### Prerequisites
 - basic playback: https://developer.apple.com/documentation/avkit
 
@@ -65,6 +71,7 @@ Two facets of API
 
 
 <br><br>
+
 ## Using Assets
 
 
@@ -73,6 +80,7 @@ Assets can come from various way(File, iPod Library, Server…etc)
 
 
 <br>
+
 #### Creating an Asset Object
 
 Using URL to create asset with AVURLAsset
@@ -95,6 +103,7 @@ Accessing the User’s Assets
 코드 필요
 
 <br>
+
 #### Preparing an Asset for Use
 
 Initializing an asset does not mean that information of item is immediately available
@@ -109,6 +118,7 @@ Load information asynchronously
 
 
 <br>
+
 #### Getting Still Images from a Video
 
 
@@ -136,6 +146,7 @@ Generating a Sequence of Images
 코드 필요 
 
 <br>
+
 #### Trimming and Transcoding a Movie
 
 Trim and Transcoding 
@@ -165,6 +176,7 @@ The case export will be canceled
 
 
 <br><br>
+
 ## Playback
 
 
@@ -220,6 +232,7 @@ AVCaptureConnection
 
 
 <br>
+
 #### Use a Capture Session to Coordinate Data Flow
 
 
@@ -270,6 +283,7 @@ Monitoring Capture Session State
 
 
 <br>
+
 #### An AVCaptureDevice Object Represents and Inputs Device
 
 AVCaptureDevice(abstract of physical device) provides input data to AVCaptureSession
@@ -360,6 +374,7 @@ Switching Between Devices
 
 
 <br>
+
 #### Use Capture Inputs to Add a Capture Device to a Session 
 
 Use AVCaptureDeviceInput 
@@ -379,6 +394,7 @@ do {
 ```
 
 <br>
+
 #### Use Capture Output to Get Output from a Session 
 
 To get output from capture session,  you add outputs. 
@@ -423,6 +439,7 @@ stillImageOutput.outputSettings = dic
     - use `captureStillImageAsynchronouslyFromConnection:completionHandler:` to capture
 
 <br>
+
 #### Showing the User What’s Being  Recorded
 
 Video Preview
@@ -443,6 +460,7 @@ Showing Audio Levels
 - use `AVCaptureAudioChannel` to monitor power level of audio
 
 <br>
+
 #### Putting It All Together: Capture Video Frames as UIImage Objects
 
 - Create an AVCaptureSession object to coordinate the flow of data from an AV input device to an output
@@ -491,6 +509,7 @@ session.startRunning()
 ```
 
 <br>
+
 #### High Frame Rate Video Capture
 
 Use AVCaptureDeviceFormat to determine the capture capbilities
